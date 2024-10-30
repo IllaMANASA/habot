@@ -1,24 +1,24 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
-
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Homepage from './components/Homepage';
+import Navbar from './components/Navbar';
+import FindSuppliers from './components/FindSuppliers';
+import FindServiceTags from './components/FindServiceTags'; 
+import Login from './components/Login';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar />
+        <Routes>
+          <Route path="/" element={<Homepage />} ></Route>
+          <Route path="/findsuppliers" element={<FindSuppliers />} ></Route>
+          <Route path="/findservices" element={<FindServiceTags />} ></Route>
+          <Route path="/Login" element={<Login />} ></Route>
+
+        </Routes>
+    </Router>
   );
 }
 

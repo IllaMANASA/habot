@@ -1,0 +1,66 @@
+.findsuppliers-container {
+    display: flex;
+    height: 70vh;
+    background-color: #072F57;
+    font-family: 'Poppins', sans-serif;
+}
+
+.leftSection {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 600px;
+    margin-top: 20px;
+}
+
+.left-image {
+    width: 90%; /* Adjust image size as needed */
+    object-fit: cover;
+    margin-top: 480px;
+    border-radius: 5 px;
+}
+
+.rightSection {
+    
+    margin-bottom: 300px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    color: white;
+}
+
+.tab-buttons {
+    display: flex;
+    margin-bottom: 20px;
+    gap: 60px;
+}
+
+.tab-button {
+    flex: 1;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    color: white;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s, border-bottom-color 0.3s;
+}
+
+.tab-button.active {
+    color: #EB7150;
+    border-bottom-color: #EB7150;
+}
+
+.content h3 {
+    margin-bottom: 10px;
+    color: white;
+}
+
+.content p {
+    margin: 5px 0;
+    color: white;
+}
