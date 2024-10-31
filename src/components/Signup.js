@@ -1,5 +1,5 @@
 import React from 'react';
-import './Signup.css'; // Ensure to create this CSS file
+import './Signup.css'; 
 
 export default function Signup() {
     return (

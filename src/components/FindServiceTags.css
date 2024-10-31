@@ -3,51 +3,54 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%; /* Full container width */
+    width: 100%;
     font-family: 'Poppins', sans-serif;
+    padding: 0; 
 }
 
 .row {
     margin-top: 50px;
     display: flex;
-    width: 100%; /* Full row width */
+    width: 100%;
     max-width: 1200px;
+    gap: 0; 
 }
 
 .box {
-    flex: 1;
+    flex: 1; 
     text-align: center;
     height: 254px;
-    margin: 0; /* Remove margin */
-    border-radius: 0; /* Remove radius for flush edges */
-    box-sizing: border-box;
+    margin: 0; 
+    border-radius: 0;
+    box-sizing: border-box; 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 0; 
 }
 
 .box1, .box3, .box5 {
-    background-color: #E8FBFF;
+    background-color: #E8FBFF; 
 }
 
 .box2, .box4, .box6 {
-    background-color: white;
+    background-color: white; 
 }
 
-/* Style for images */
 .box img {
-    height: 45px;
-    width: 45px;
-    margin-bottom: 15px; /* Space between icon and text */
+    height: 55px;
+    width: 55px;
+    margin-bottom: 15px; 
 }
+
 .description {
-    width: 100%; /* Full width for the description */
-    max-width: 800px; /* Optional: Limit the max width */
+    width: 100%;
+    max-width: 800px;
     margin: 0 auto; /* Center the text block */
-    line-height: 1.5; /* Improve readability */
-    text-align: center; /* Center-align text */
-    padding: 0 20px; /* Optional: Padding for spacing */
+    line-height: 1.5;
+    text-align: center;
+    padding: 0 20px; 
     white-space: normal; /* Ensure it wraps to the next line */
     font-family: 'Poppins', sans-serif;
 }

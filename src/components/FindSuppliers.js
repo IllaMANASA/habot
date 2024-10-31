@@ -1,23 +1,9 @@
-// import './FindSuppliers.css';
-// export default function FindSuppliers(){
-//     return(
-//         <div className="container">
-//             <div className="left-container">
-//                 <img src={requirementImg} alt='Post of Requirements' height='350px' width='640px' className='img1' />
-//             </div>
-//             <div className="right-container">
-//                 <button className='buttons '>Buyer</button>
-//                 <button className='buttons '>Supplier</button>
-//             </div>
-//         </div>
-//     )
-// }
 import React, { useState } from 'react';
 import './FindSuppliers.css';
 import requirementImg from '../assets/req-img.jpeg';
 
 export default function FindSuppliers() {
-    const [activeTab, setActiveTab] = useState('buyers'); // Default to "buyers"
+    const [activeTab, setActiveTab] = useState('buyers'); 
 
     const handleTabClick = (tab) => {
         setActiveTab(tab);
@@ -52,7 +38,6 @@ export default function FindSuppliers() {
                         </div>
                     ) : (
                         <div>
-                            {/* Content for Suppliers tab */}
                             <p><i class="fa fa-check-circle" style={{ fontSize: '24px', color: 'green' }} aria-hidden="true"></i> Become a Supplier</p>
                             <p><i class="fa fa-check-circle" style={{ fontSize: '24px', color: 'green' }} aria-hidden="true"></i> Connect with potential buyers and grow your business.</p>
                             <p><i class="fa fa-check-circle" style={{ fontSize: '24px', color: 'green' }} aria-hidden="true"></i> Showcase your offerings and reach a larger audience.</p>

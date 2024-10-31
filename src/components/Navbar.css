@@ -1,19 +1,23 @@
-/* Navbar styling */
 .navbar {
   display: flex;
   align-items: center;
-  gap: 50px;
-  padding: 5px 10px;
-  height: 86px;
-  box-sizing: border-box;
+  justify-content: space-between;
+  padding: 10px 20px;
   font-family: 'Poppins', sans-serif;
+  position: relative;
+  z-index: 2;
+}
+
+.navbar-logo {
+  height: 81px;
+  width: 130px;
+  margin-left: 40px;
 }
 
 .links {
   display: flex;
-  gap: 50px;
-  margin-left: auto;
-  align-items: center;
+  gap: 30px;
+  transition: all 0.3s ease-in-out;
 }
 
 .links a {
@@ -23,78 +27,122 @@
   font-weight: normal;
   display: inline-flex;
   align-items: center;
+  transition: color 0.2s ease-in-out;
 }
 
 .links a:hover {
-  text-decoration: underline;
+  color: #4CAF50;
 }
 
 .login-signup {
-  color: green;
-  border: 2px solid green;
+  color: #00732F;
+  border: 2px solid #00732F;
   padding: 8px 20px;
   border-radius: 5px;
   font-weight: bold;
   text-align: center;
+  transition: background-color 0.2s ease-in-out;
 }
 
 .login-signup:hover {
-  background-color: #e6f4ea;
+  color: #fff;
 }
 
-.login-signup:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(0, 128, 0, 0.3);
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #737373;
+}
+
+/* Dropdown Styling */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-button {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  color: #6D6E71;
+  margin-top: 10px;
+}
+
+.dropdown-arrow {
+  margin-left: 5px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #f9f9f9;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  min-width: 150px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown-content:hover {
+  display: block;
+}
+
+.dropdown-content a {
+  color: #737373;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
 }
 
 /* Responsive Styling */
-
-/* Medium screens (tablets) */
 @media (max-width: 768px) {
   .navbar {
-      padding: 10px;
-      gap: 20px;
+    padding: 10px;
   }
 
   .links {
-      gap: 20px; /* Reduce gap between links */
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #f9f9f9;
+    width: 100%;
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    top: 0; /* Ensure it aligns with the top of the navbar */
+    transition: padding-top 0.3s ease; /* Smooth transition */
+  }
+
+  .links.open {
+    display: flex;
+    padding-top: 20px; /* Add padding to the top */
   }
 
   .links a {
-      font-size: 14px; /* Adjust font size */
+    font-size: 16px;
+    padding: 10px 20px;
+    text-align: center;
   }
 
   .login-signup {
-      padding: 6px 15px; /* Adjust padding for smaller screens */
-      font-size: 14px;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .hamburger {
+    display: block;
+    margin-left: auto;
+  }
+
+  .dropdown-content {
+    position: static;
+    width: 100%;
   }
 }
 
-/* Small screens (phones) */
-@media (max-width: 480px) {
-  .navbar {
-      flex-direction: column; /* Stack items vertically */
-      align-items: center;
-      padding: 10px 0;
-  }
-
-  .links {
-      flex-direction: column; /* Stack links vertically */
-      gap: 15px;
-  }
-
-  .links a {
-      font-size: 16px; /* Slightly increase font for readability */
-  }
-
-  .login-signup {
-      padding: 10px 15px; /* Adjust padding */
-      width: 100%; /* Full width button */
-      text-align: center;
-  }
-
-  .navbar img {
-      height: 100px; /* Adjust logo size */
-      width: auto;
-  }
+/* To create space for the expanded navbar */
+.links.open + .homepage {
+  margin-top: 300px; /* Adjust height based on menu size */
 }
